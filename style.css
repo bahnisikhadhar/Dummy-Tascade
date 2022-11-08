@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    background-color: black; 
+    color: white;
+}
+/* General css */
+.container {
+    max-width: 1440px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+:root {
+    --bg-color: white;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/********************************Start of Header****************************************************************/
+header {
+    background-color: transparent;
+    position: fixed;
+    z-index: 1000;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head__left {
+    display: flex;
+    /* justify-content:space-evenly ; */
+    gap: 4rem;
+    align-items: center;
+}
+.head__navigation {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 4rem;
+    align-items: center;
+}
+
+.head__left img {
+ max-width: 15%;
+}
+.head__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.head__right .btn {
+    padding: .8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
+nav ul li {
+    position: relative;
+    font-size: 1.2rem;
+}
+nav ul li a {
+    color: white;
+    line-height: 2.5rem;
+    font-size: 1.1rem;
+}
+nav ul ul {
+    position: absolute;
+    min-width:15rem;
+    top: 50px;
+    display: none;
+    /* border: 1px solid red; */
+}
+nav ul li:hover >ul{
+    display: block;
+}
+nav ul li i:hover {
+    transition-duration: 1s;
+    transform: rotate(180deg);
+}
+/* #headline i:hover{
+    transition-duration: 1s;
+    transform: rotate(180deg);
+} */
+.head .price:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+.btn--yellow {
+    background-color: rgb(231, 202, 12);
+}
+.btn--black {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+.btn--black:hover{
+    background-color: rgb(231, 202, 12);
+    color: black;
+    border: none;
+}
