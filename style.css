@@ -80,13 +80,14 @@ nav ul ul {
     position: absolute;
     min-width:15rem;
     top: 50px;
+    left: -60px;
     display: none;
 }
 nav ul li:hover >ul{
     display: block;
     background-color: black;
     padding-left: 2rem;
-
+    padding-bottom: 2rem;
 }
 nav ul li i:hover {
     /* transition-duration: 1s; */
