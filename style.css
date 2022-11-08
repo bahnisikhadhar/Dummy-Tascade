@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: sans-serif;
 }
 body {
     background-color: black; 
@@ -11,23 +12,34 @@ body {
 }
 /* General css */
 .container {
-    max-width: 1440px;
-    padding: 0 10px;
+    /* max-width: 1440px; */
+    padding: 0 5rem;
     margin: 0 auto;
 }
 :root {
     --bg-color: white;
+    --bg-color1:rgb(231, 202, 12);
+    --bg-color2:rgb(222, 205, 92);
 }
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.btn {
+    padding: .8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
 /********************************Start of Header****************************************************************/
 header {
-    background-color: transparent;
+    background-color:rgb(0, 0, 0);
     position: fixed;
-    z-index: 1000;
+    padding: 1rem 0rem;
+    /* height: 6rem; */
+    /* z-index: 1000; */
+    /* border: 1px solid white; */
 }
 .head{
     display: flex;
@@ -36,13 +48,13 @@ header {
 }
 .head__left {
     display: flex;
-    /* justify-content:space-evenly ; */
+    /* justify-content:space-between ; */
     gap: 4rem;
     align-items: center;
 }
 .head__navigation {
     display: flex;
-    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
     gap: 4rem;
     align-items: center;
 }
@@ -54,12 +66,6 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-.head__right .btn {
-    padding: .8rem 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 10px;
 }
 nav ul li {
     position: relative;
@@ -75,25 +81,26 @@ nav ul ul {
     min-width:15rem;
     top: 50px;
     display: none;
-    /* border: 1px solid red; */
 }
 nav ul li:hover >ul{
     display: block;
+    background-color: black;
+    padding-left: 2rem;
+
 }
 nav ul li i:hover {
-    transition-duration: 1s;
+    /* transition-duration: 1s; */
     transform: rotate(180deg);
 }
-/* #headline i:hover{
-    transition-duration: 1s;
-    transform: rotate(180deg);
-} */
 .head .price:hover {
     text-decoration: underline;
     text-underline-offset: 10px;
 }
 .btn--yellow {
-    background-color: rgb(231, 202, 12);
+    background-color: var(--bg-color2);
+}
+.btn--yellow:hover {
+    background-color: var(--bg-color1);
 }
 .btn--black {
     background-color: black;
@@ -101,7 +108,76 @@ nav ul li i:hover {
     border: 1px solid white;
 }
 .btn--black:hover{
-    background-color: rgb(231, 202, 12);
+    background-color:var(--bg-color2);
     color: black;
     border: none;
+}
+
+/***********************************************FIRST SECTION****************************************************/
+.first_section {
+    height: 100vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    gap: 7rem;
+    padding-top: 12rem;
+}
+/* .first_section__left
+{
+    max-width: 60%; 
+     border: 1px solid white;
+} */
+.first_section__left h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+.first_section__left h1 span {
+    /* background-color:#f64942; */
+    background-image: linear-gradient(90deg,#f64942,#ef90a4,#5b95bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.first_section__left p{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 4rem;
+}
+.first_section__mail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    padding: 1rem;
+    background-color: rgb(37, 37, 37);
+    border-radius: 27px;
+}
+.btn--mail{
+    padding: .7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px; 
+    background-color: var(--bg-color2);
+}
+.btn--mail:hover {
+background-color: var(--bg-color1);
+}
+.mail__text {
+    padding-left: 1rem;
+    font-size: 1rem;
+    color: gray;
+}
+.mail__text input {
+    background-color:rgb(37, 37, 37) ;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    color: white;
+}
+.first_section__right img {
+    max-width: 100%;
+    max-height: 60rem;
 }
