@@ -196,7 +196,6 @@ background-color: var(--bg-color1);
 }
 /******************************************List of Icons******************************************************/
 .get_taskade {
-    /* color: white; */
     max-width: 80%;
     margin: 10rem auto;
     border-radius: 25px;
@@ -216,11 +215,19 @@ background-color: var(--bg-color1);
 }
 .app_icons {
     display: flex;
-    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 2rem;
     align-items: center;
-    padding: 0rem 10rem;
+    padding: 0rem 2rem;
 }
-
+.app_icons_three_pair {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
 .app_icons__content p{
    padding-top: 1rem;
    font-size: .9rem;
@@ -263,7 +270,7 @@ background-color: var(--bg-color1);
 
 @media (min-width:0px) and (max-width:1000px)
 {
-    .head nav, .head__right .btn--black, .first_section__mail {
+    .head nav, .head__right .btn--black, .first_section__mail, .get_taskade img {
         display: none;
     }
     .head__left img {
@@ -281,7 +288,7 @@ background-color: var(--bg-color1);
         gap: 0;
     }
     .first_section__left {
-        padding-top: 35rem;
+        padding-top: 10rem;
         max-width: 100%;
     }
     .first_section__right img {
@@ -291,18 +298,29 @@ background-color: var(--bg-color1);
         font-size: 2.8rem;
         line-height: 3rem;
     }
-    
-    
+    .get_taskade {
+         background-color: black;
+         padding: 0;
+         max-width: 100%;
+    }
+    .app_icons_three_pair {
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+    .app_icons {
+       flex-direction: column;
+       flex-wrap: wrap;
+    }
 }
 
 
 
 @media (min-width:0px) and (max-width:600px)
 {
-    .first_section__left {
+    /* .first_section__left {
         padding-top: 17rem;
         max-width: 100%;
-    }
+    } */
     .head__left img {
         max-width: 40%;
        }
