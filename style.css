@@ -77,21 +77,25 @@ nav ul li a {
     line-height: 2.5rem;
     font-size: 1.1rem;
 }
-nav ul ul {
-    position: absolute;
-    min-width:15rem;
-    top: 50px;
-    left: -60px;
+.drop_box {
     display: none;
 }
-nav ul li:hover >ul{
+
+nav ul li:hover .drop_box {
     display: block;
+    position: absolute;
+    min-width:15rem;
+    top: 25px; 
+    /* if increase the top then dropdown menu won't stay after hover as it should be placed within the header part */
+    left: -60px;
     background-color: black;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
+    padding: 1.7rem;
+    /* border: 1px solid white; */
+}
+nav ul li:hover .drop_box ul {
+    display: block;
 }
 nav ul li i:hover {
-    /* transition-duration: 1s; */
     transform: rotate(180deg);
 }
 .head .price:hover {
@@ -174,15 +178,24 @@ background-color: var(--bg-color1);
     outline: none;
     color: white;
 }
+
 .first_section__right img {
     max-width: 90%;
     padding-top: 10rem;
     position: relative;
-    animation: up_down 2s ease-in-out 0s infinite forwards;
+    animation: entry 1s ease-in 0s 1 forwards,
+               up_down 2s ease-in-out 0s infinite forwards;
     
 }
+@keyframes entry {
+    0% {
+       left: 100vw; 
+    }
+    100% {
+        left: 5vw;
+    }
 
-
+} 
 @keyframes up_down {
     0% {
         top: 0rem;
