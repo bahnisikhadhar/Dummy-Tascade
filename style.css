@@ -180,7 +180,7 @@ background-color: var(--bg-color1);
 }
 
 .first_section__right img {
-    max-width: 90%;
+    max-width: 100%;
     padding-top: 10rem;
     position: relative;
     animation: entry 1s ease-in 0s 1 forwards,
@@ -192,7 +192,7 @@ background-color: var(--bg-color1);
        left: 100vw; 
     }
     100% {
-        left: 5vw;
+        left: 3vw;
     }
 
 } 
