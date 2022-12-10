@@ -35,7 +35,10 @@ body {
 }
 /********************************Start of Header****************************************************************/
 header {
-    background-color:rgb(0, 0, 0,0.9);
+    background:rgb(0, 0, 0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0);
+    /* box-shadow: rgb(255 255 255 / 0%) 0px 1px 1px inset, rgb(0 0 0 / 0%) 0px -1px 3px inset; */
+    backdrop-filter: blur(24px);
     position: fixed;
     top: 0;
     padding: 1rem 0rem;
@@ -251,12 +254,38 @@ background-color: var(--bg-color1);
     border-radius: 25px;
 }
 .app_icons .fa-brands {
-    color: white;
+    /* color: white; */
     font-size: 1.5rem;
 }
+.green {
+    color: rgb(45, 189, 45);
+}
+.blue{
+    color: deepskyblue;
+}
+.red{
+    color: #f64942;
+}
+.yellow {
+    color: yellow;
+}
+.greenyellow{
+    background-image:linear-gradient(#f64942,yellow,green) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
+.orangered{
+    background-image:linear-gradient(rgb(249, 201, 113),#e52d26) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-
+.skyblue{
+    background-image:linear-gradient(rgb(1, 110, 1),skyblue,rgb(6, 81, 110)) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 
 
