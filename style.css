@@ -264,7 +264,14 @@ background-color: var(--bg-color1);
     color: deepskyblue;
 }
 .red{
-    color: #f64942;
+    background-image:linear-gradient(#f64942,#ec928f) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.windows_yellow{
+    background-image:linear-gradient(#f64942,yellow,green,skyblue) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .yellow {
     color: yellow;
